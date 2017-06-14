@@ -5,6 +5,7 @@ app.get('/wx', function (req, res) {
     if (!req.param('data')) {
         res.send('Hello World!');
     }
+    var data = req.param('data')
     var signature = data.signature,
     timestamp = data.timestamp,
     nonce = data.nonce,
