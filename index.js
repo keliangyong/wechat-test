@@ -2,10 +2,11 @@ var express = require('express');
 var app = express();
 
 app.get('/wx', function (req, res) {
-    if (!req.param('data')) {
+    if (!req.params.data) {
         res.send('Hello World!');
     }
-    var data = req.param('data')
+    var data = req.params.data
+    console.log(data)
     var signature = data.signature,
     timestamp = data.timestamp,
     nonce = data.nonce,
