@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
+app.get('/wx', function (req, res) {
     if (!req.param('data')) {
         res.send('Hello World!');
     }
